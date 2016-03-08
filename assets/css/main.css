@@ -4,25 +4,9 @@
 .subtitle-page{font-family:Copernicus;font-size:2em;text-align:center;margin-left:auto;margin-right:auto;margin-bottom:1em;}
 .button-portfolio{border:2px solid #1ebef0;border-radius:3px;background:#1ebef0;padding:0.3em 0.5em;display:block;margin-top:2em;margin-left:auto;margin-right:auto;font-family:'Open Sans', sans-serif;font-size:1.4em;color:#fbfbfb;cursor:pointer;transition:200ms;display:none;}
 .button-portfolio:hover{border:2px solid #1ebef0;background:rgba(255, 255, 255, 0);color:#1ebef0;transition:200ms;}
+
 .button-labs{border:1px solid;border-radius:3px;font-family:'Open Sans', sans-serif;font-size:1.2em;font-weight:300;padding:0.2em 0.5em;display:block;cursor:pointer;margin:1em auto;border-color:#ff4b39;color:#ff4b39;background:#fbfbfb;transition:200ms;}
 .button-labs:hover{border-color:#fbfbfb;color:#fbfbfb;background:rgba(255, 255, 255, 0);transition:200ms;}
-header{width:100%;background-color:#1ebef0;background-image:url(../img/layout-img/background-header.jpg);background-size:cover;background-position:bottom;}
-header > h1.logo{width:90%;max-width:20em;min-height:6em;display:block;margin:0 auto;position:relative;z-index:2;top:35%;text-indent:-50000em;background-image:url(../img/layout-img/logo.svg);background-size:contain;background-position:center;background-repeat:no-repeat;}
-.menu{width:100%;top:auto;bottom:0px;z-index:100;background-color:#181716;text-align:center;}
-.menu > ul{max-height:4em;overflow:hidden;}
-.menu > ul > li{display:inline-block;font-family:'Open Sans', sans-serif;font-size:1.3em;font-weight:300;transition:300ms;}
-.menu > ul > li > a{width:100%;display:block;color:#fbfbfb;text-decoration:none;padding:0.1em 0.8em;transition:300ms;}
-.menu ul li:hover:nth-child(1){background-color:#1ebef0;transition:300ms;}
-.menu ul li:hover:nth-child(2){background-color:#ff4b39;transition:300ms;}
-.menu ul li:hover:nth-child(3){background-color:#67b025;transition:300ms;}
-@media screen and (max-width:770px){.menu{position:fixed;}
-.menu > ul > li{width:33.33%;text-align:center;}
-.menu > ul > li > a{padding:0.9em 0;}
-}
-@media screen and (min-width:770px){.menu{position:absolute;}
-.menu > ul > li{margin-right:0.01em;margin-left:0.01em;margin-bottom:1em;}
-.menu > ul > li > a{padding:0.9em 2.5em;}
-}
 .portfolio{width:100%;margin:3em 0;display:table;}
 .portfolio > .title-page{border-bottom:4px solid #1ebef0;width:5em;}
 .portfolio > .cards-jobs{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}

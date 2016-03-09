@@ -1,0 +1,88 @@
+.about-social
+  width: 80%
+  display: block
+  margin: 0 auto
+  text-align: center
+
+  > li
+    display: inline-block
+    margin:
+      top: 2em
+      left: 0.5em
+      right: 0.5em
+    background:
+      position: center
+      color: $white
+      repeat: no-repeat
+
+    > a
+      width: 2.5em
+      height: 2.5em
+      border-radius: 100%
+      display: block
+      transition: 200ms
+
+@media screen and #{$mobile}
+  .about-social
+    width: 100%
+
+    > li
+
+
+  // Icons Settings
+  .email-icon
+    fill: orange
+
+  .behance-icon
+    fill: $behance-color
+
+  .github-icon
+    fill: $github-color
+
+  .twitter-icon
+    fill: $twitter-color
+
+@media screen and #{$desktop}
+  .email-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: orange
+      fill-opacity: 1
+      transition: 200ms
+
+  .behance-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $behance-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .github-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $github-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .twitter-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $twitter-color
+      fill-opacity: 1
+      transition: 200ms
+
+// .about-div
+.about-div
+  width: 80%
+  max-width: 60em
+  height: 2px
+  background: $notso-black
+  display: block
+  margin:
+    left: auto
+    right: auto
+    bottom: 3.3em

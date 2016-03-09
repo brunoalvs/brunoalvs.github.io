@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt">
   {% include head.html %}
-
   <body>
+    {{ content }}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
+    <script type="text/javascript">
+      (function() {
+        var windowHeight = window.innerHeight;
+        document.getElementById('header').style.height = windowHeight + 'px';
+      }());
+    </script>
 
   </body>
 

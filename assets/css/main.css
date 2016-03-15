@@ -34,6 +34,7 @@
  * Labs-section.........Definição de Estilos do componente da seção do LABS e também de seus elementos.
  * About-bio............Estilos da sessão 'Sobre mim', como cabeçalhos e parágrafos.
  * About-social.........Configuração de estilos para a lista de perfis nas redes sociais.
+ * about-div............Configuração de estilos para sessão de divisão entre about-social e about-skills.
  * About-skills.........Configuração de estilos para as listas de habilidades e tecnologias/métodos.
  * Footer-page..........Estilo do rodapé(footer) da página.
  *
@@ -200,37 +201,13 @@ header {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-    .portfolio > .cards-jobs > .job {
-      position: relative;
+    .portfolio > .cards-jobs > a.job {
       width: 100%;
       max-width: 560px;
       max-height: 335px;
-      display: block;
-      margin: 0.5em;
       overflow: hidden; }
-      .portfolio > .cards-jobs > .job > .label-title {
-        z-index: 1;
-        position: absolute;
-        opacity: 1;
-        width: 100%;
-        bottom: 0; }
-        .portfolio > .cards-jobs > .job > .label-title > .title-job {
-          font-family: 'Open Sans', sans-serif;
-          font-size: 1.15em;
-          font-weight: 300;
-          color: white;
-          margin: 0.6em 1em; }
-          .portfolio > .cards-jobs > .job > .label-title > .title-job > b {
-            font-weight: 400; }
-      .portfolio > .cards-jobs > .job > .card-background img {
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        overflow: hidden; }
-    .portfolio > .cards-jobs > .ktm > .label-title {
-      background: rgba(103, 176, 37, 0.85); }
-    .portfolio > .cards-jobs > .satoplay > .label-title {
-      background: rgba(166, 69, 149, 0.85); }
+      .portfolio > .cards-jobs > a.job > a.job:hover .label-title {
+        position: absolute; }
 
 .labs {
   width: 100%;
@@ -350,13 +327,13 @@ header {
   max-width: 60em;
   height: 2px;
   background: #444444;
-  display: block;
+  display: none;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3.3em; }
 
 .about-skills {
-  display: block;
+  display: none;
   width: 80%;
   margin: 0 auto; }
   .about-skills > h3.subtitle-page {

@@ -168,7 +168,7 @@ header {
     background-color: #ff4b39;
     transition: 300ms; }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 769px) {
   .menu {
     position: fixed; }
     .menu > ul > li {
@@ -308,7 +308,7 @@ header {
       display: block;
       transition: 200ms; }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 769px) {
   .about-social {
     width: 100%; }
   .email-icon {

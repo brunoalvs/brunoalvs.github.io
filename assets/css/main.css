@@ -49,6 +49,9 @@
   margin: 0;
   padding: 0; }
 
+bold {
+  background: #fbfbfb; }
+
 * {
   box-sizing: border-box; }
 
@@ -159,10 +162,10 @@ header {
     background-color: #1ebef0;
     transition: 300ms; }
   .menu ul li:hover:nth-child(2) {
-    background-color: #ff4b39;
+    background-color: #009688;
     transition: 300ms; }
   .menu ul li:hover:nth-child(3) {
-    background-color: #67b025;
+    background-color: #ff4b39;
     transition: 300ms; }
 
 @media screen and (max-width: 770px) {
@@ -236,6 +239,7 @@ header {
 .labs {
   width: 100%;
   height: 100%;
+  background-image: url(../img/layout-img/bg-labs.png);
   background-color: #009688;
   color: #fbfbfb;
   font-family: 'Open Sans', sans-serif;
@@ -268,7 +272,7 @@ header {
   display: table;
   background: #fbfbfb; }
   .about > .title-page {
-    border-bottom: 4px solid #67b025;
+    border-bottom: 4px solid #ff4b39;
     width: 3.5em;
     margin-top: 0.4em; }
   .about > .about-bio {
@@ -357,12 +361,13 @@ header {
   margin-bottom: 3.3em; }
 
 .about-skills {
-  display: none;
-  width: 80%;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  background: #fbfbfb;
+  display: none; }
   .about-skills > h3.subtitle-page {
     color: #444444;
-    border-bottom: 4px solid #ff4b39;
+    border-bottom: 4px solid #67b025;
     width: 100%;
     max-width: 6.65em; }
 

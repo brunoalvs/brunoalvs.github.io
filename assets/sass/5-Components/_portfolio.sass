@@ -7,24 +7,27 @@
     border-bottom: 4px solid $blue
     width: 5em
 
+  // cards-jobs
   > .cards-jobs
     display: flex
     justify-content: center
     flex-wrap: wrap
 
     > .job
+      position: relative
       width: 100%
       max-width: 560px
       max-height: 335px
-      position: relative
+      display: block
       margin: 0.5em
       overflow: hidden
 
       > .label-title
-        width: 100%
+        z-index: 1
         position: absolute
+        opacity: 1
+        width: 100%
         bottom: 0
-        background: $notso-black
 
         > .title-job
           font-family: 'Open Sans', sans-serif
@@ -33,9 +36,20 @@
           color: white
           margin: 0.6em 1em
 
-    .ktm
+          > b
+            font-weight: 400
+
+      > .card-background img
+        width: 100%
+        height: 100%
+        z-index: 2
+        overflow: hidden
+
+    // cards-jobs | justify-content: center
+    > .ktm
       > .label-title
         background: $alph-blue
-    .satoplay
+
+    > .satoplay
       > .label-title
         background: $alph-purple

@@ -100,8 +100,8 @@
   display: block;
   cursor: pointer;
   margin: 1em auto;
-  border-color: #ff4b39;
-  color: #ff4b39;
+  border-color: #009688;
+  color: #009688;
   background: #fbfbfb;
   transition: 200ms; }
 
@@ -227,7 +227,7 @@ header {
 .labs {
   width: 100%;
   height: 100%;
-  background-image: url(../img/layout-img/bg-labs.png);
+  background-color: #009688;
   color: #fbfbfb;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;

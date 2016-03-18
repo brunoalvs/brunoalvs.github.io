@@ -1,23 +1,32 @@
 .about-social
-  width: 80%
+  width: 100%
   display: block
-  margin: 0 auto
+  margin:
+    top: 2em
+    left: auto
+    right: auto
   text-align: center
+  padding-bottom: 2em
+  border-bottom: 0.01em solid $almost-black
 
   > li
     display: inline-block
+    width: 20%
+    max-width: 2.5em
+    height: 20%
+    max-height: 2.5em
     margin:
-      top: 2em
-      left: 0.5em
-      right: 0.5em
+      left: 0.3em
+      right: 0.3em
     background:
       position: center
       color: $white
       repeat: no-repeat
+    border-radius: 100%
 
     > a
-      width: 2.5em
-      height: 2.5em
+      width: 100%
+      height: 100%
       border-radius: 100%
       display: block
       transition: 200ms
@@ -25,9 +34,6 @@
 @media screen and #{$mobile}
   .about-social
     width: 100%
-
-    > li
-
 
   // Icons Settings
   .email-icon
@@ -39,6 +45,9 @@
   .github-icon
     fill: $github-color
 
+  .linkedin-icon
+    fill: $linkedin-color
+
   .twitter-icon
     fill: $twitter-color
 
@@ -47,7 +56,7 @@
     fill-opacity: .6
     transition: 200ms
     &:hover
-      fill: orange
+      fill: $email-color
       fill-opacity: 1
       transition: 200ms
 
@@ -64,6 +73,14 @@
     transition: 200ms
     &:hover
       fill: $github-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .linkedin-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $linkedin-color
       fill-opacity: 1
       transition: 200ms
 

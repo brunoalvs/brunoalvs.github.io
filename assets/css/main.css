@@ -34,7 +34,6 @@
  * Labs-section.........Definição de Estilos do componente da seção do LABS e também de seus elementos.
  * About-bio............Estilos da sessão 'Sobre mim', como cabeçalhos e parágrafos.
  * About-social.........Configuração de estilos para a lista de perfis nas redes sociais.
- * about-div............Configuração de estilos para sessão de divisão entre about-social e about-skills.
  * About-skills.........Configuração de estilos para as listas de habilidades e tecnologias/métodos.
  * Footer-page..........Estilo do rodapé(footer) da página.
  *
@@ -50,7 +49,7 @@
   padding: 0; }
 
 bold {
-  background: #fbfbfb; }
+  background-color: #fbfbfb; }
 
 * {
   box-sizing: border-box; }
@@ -65,11 +64,17 @@ bold {
 
 .subtitle-page {
   font-family: Copernicus;
-  font-size: 2em;
+  font-size: 2.2em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em; }
+
+.skill-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #444444; }
 
 .button-portfolio {
   border: 2px solid #1ebef0;
@@ -268,7 +273,8 @@ header {
 
 .about {
   width: 100%;
-  padding: 2em 0;
+  padding-top: 2em;
+  padding-bottom: 1.3em;
   display: table;
   background: #fbfbfb; }
   .about > .title-page {
@@ -289,21 +295,29 @@ header {
     text-align: center; }
 
 .about-social {
-  width: 80%;
+  width: 100%;
   display: block;
-  margin: 0 auto;
-  text-align: center; }
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 2em;
+  border-bottom: 0.01em solid #181716; }
   .about-social > li {
     display: inline-block;
-    margin-top: 2em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    width: 20%;
+    max-width: 2.5em;
+    height: 20%;
+    max-height: 2.5em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
     background-position: center;
     background-color: #fbfbfb;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border-radius: 100%; }
     .about-social > li > a {
-      width: 2.5em;
-      height: 2.5em;
+      width: 100%;
+      height: 100%;
       border-radius: 100%;
       display: block;
       transition: 200ms; }
@@ -317,6 +331,8 @@ header {
     fill: #005CFF; }
   .github-icon {
     fill: #201F1F; }
+  .linkedin-icon {
+    fill: #0177B5; }
   .twitter-icon {
     fill: #00ACED; } }
 
@@ -342,6 +358,13 @@ header {
       fill: #201F1F;
       fill-opacity: 1;
       transition: 200ms; }
+  .linkedin-icon {
+    fill-opacity: .6;
+    transition: 200ms; }
+    .linkedin-icon:hover {
+      fill: #0177B5;
+      fill-opacity: 1;
+      transition: 200ms; }
   .twitter-icon {
     fill-opacity: .6;
     transition: 200ms; }
@@ -350,26 +373,101 @@ header {
       fill-opacity: 1;
       transition: 200ms; } }
 
-.about-div {
-  width: 80%;
-  max-width: 60em;
-  height: 2px;
-  background: #444444;
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3.3em; }
-
 .about-skills {
   width: 100%;
   margin: 0 auto;
-  background: #fbfbfb;
-  display: none; }
+  background: #fbfbfb; }
   .about-skills > h3.subtitle-page {
     color: #444444;
     border-bottom: 4px solid #67b025;
     width: 100%;
-    max-width: 6.65em; }
+    max-width: 6.8em; }
+  .about-skills > .skills-levels {
+    width: 90%;
+    max-width: 54em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    padding-bottom: 0.5em; }
+    .about-skills > .skills-levels > .skills-dev {
+      margin: 1em 0; }
+    .about-skills > .skills-levels > .skills-design {
+      margin: 3em 0; }
+
+.dev {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0.45em 0;
+  font-weight: 300;
+  font-size: 1.4em; }
+  .dev > .bar {
+    position: relative;
+    background: #1ebef0;
+    display: block;
+    padding: 0.2em 0.6em; }
+    .dev > .bar > .name-bar {
+      color: #fbfbfb;
+      margin-bottom: 0.2em; }
+  .dev > .percent {
+    margin-left: 0.3em;
+    font-style: italic;
+    color: #6c6c6c; }
+
+.html > .bar {
+  width: 95%; }
+
+.css > .bar {
+  width: 80%; }
+
+.js > .bar {
+  width: 50%; }
+
+.sass > .bar {
+  width: 75%; }
+
+.git > .bar {
+  width: 70%; }
+
+.design {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0.45em 0;
+  font-weight: 300;
+  font-size: 1.4em; }
+  .design > .bar {
+    position: relative;
+    background: #a64595;
+    display: block;
+    padding: 0.2em 0.6em; }
+    .design > .bar > .name-bar {
+      color: #fbfbfb;
+      margin-bottom: 0.2em; }
+  .design > .percent {
+    margin-left: 0.3em;
+    font-style: italic;
+    color: #6c6c6c; }
+
+.fw > .bar {
+  width: 90%; }
+
+.il > .bar {
+  width: 70%; }
+
+.ps > .bar {
+  width: 50%; }
 
 footer {
   background-color: #181716;

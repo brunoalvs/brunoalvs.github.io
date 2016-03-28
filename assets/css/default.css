@@ -77,6 +77,40 @@ bold {
   background: rgba(255, 255, 255, 0);
   transition: 200ms; }
 
+.button-job {
+  border-radius: 3px;
+  padding: 0.3em 0.5em;
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: 200ms; }
+
+.button-job:hover {
+  transition: 200ms; }
+
+.button-satoplay {
+  border: 2px solid rgba(166, 69, 149, 0.9);
+  background: rgba(166, 69, 149, 0.9); }
+
+.button-satoplay:hover {
+  border: 2px solid rgba(166, 69, 149, 0.9);
+  background: rgba(255, 255, 255, 0);
+  color: rgba(166, 69, 149, 0.9); }
+
+.button-ktm {
+  border: 2px solid rgba(255, 102, 0, 0.9);
+  background: rgba(255, 102, 0, 0.9); }
+
+.button-ktm:hover {
+  border: 2px solid rgba(255, 102, 0, 0.9);
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 102, 0, 0.9); }
+
 footer {
   background-color: #181716;
   width: 100%;
@@ -93,3 +127,7 @@ footer {
     margin-top: 0.25em; }
     footer > .copyright > a {
       color: #6c6c6c; }
+
+@media screen and (max-width: 769px) {
+  footer {
+    margin-top: 2em; } }

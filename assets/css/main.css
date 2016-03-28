@@ -469,18 +469,7 @@ header {
 .ps > .bar {
   width: 50%; }
 
-footer {
-  background-color: #181716;
-  width: 100%;
-  height: 40px;
-  overflow: hidden; }
-  footer > .copyright {
-    font-family: 'Open Sans';
-    font-size: 1.3em;
-    font-weight: 300;
-    color: #6c6c6c;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 0.25em; }
-    footer > .copyright > a {
-      color: #6c6c6c; }
+/*
+ * Itens que estão em default.sass
+ *  @import 5-Components/footer
+ */

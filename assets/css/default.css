@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Copernicus;
+  src: url(../fonts/Copernicus-Heavy.ttf); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+bold {
+  background-color: #fbfbfb; }
+
+* {
+  box-sizing: border-box; }
+
+.title-page {
+  font-family: Copernicus;
+  font-size: 3em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+
+.subtitle-page {
+  font-family: Copernicus;
+  font-size: 2.2em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+
+.skill-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #444444; }
+
+.button-portfolio {
+  border: 2px solid #1ebef0;
+  border-radius: 3px;
+  background: #1ebef0;
+  padding: 0.3em 0.5em;
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: 200ms;
+  display: none; }
+
+.button-portfolio:hover {
+  border: 2px solid #1ebef0;
+  background: rgba(255, 255, 255, 0);
+  color: #1ebef0;
+  transition: 200ms; }
+
+.button-labs {
+  border: 1px solid;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0.2em 0.5em;
+  display: block;
+  cursor: pointer;
+  margin: 1em auto;
+  border-color: #009688;
+  color: #009688;
+  background: #fbfbfb;
+  transition: 200ms; }
+
+.button-labs:hover {
+  border-color: #fbfbfb;
+  color: #fbfbfb;
+  background: rgba(255, 255, 255, 0);
+  transition: 200ms; }
+
+footer {
+  background-color: #181716;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  position: absolute; }
+  footer > .copyright {
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #6c6c6c;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.25em; }
+    footer > .copyright > a {
+      color: #6c6c6c; }

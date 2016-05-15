@@ -24,27 +24,35 @@
 
 // button-labs
 .button-labs
+  width: 190px
   border: 1px solid
   border-radius: 3px
   font:
     family: 'Open Sans', sans-serif
     size: 1.2em
     weight: 300
-  padding: 0.2em 0.5em
-  display: block
-  cursor: pointer
 
+  cursor: pointer
   margin: 1em auto
   border-color: $other-green
   color: $other-green
   background: $white
   transition: 200ms
 
+  > a
+    color: $other-green
+    text-decoration: none
+    padding: 0.2em 0.5em
+    display: block
+
 .button-labs:hover
   border-color: $white
   color: $white
   background: rgba(255, 255, 255, 0)
   transition: 200ms
+
+  > a
+    color: $white
 
 // button-job
 

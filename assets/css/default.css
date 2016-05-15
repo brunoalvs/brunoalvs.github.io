@@ -57,25 +57,31 @@ bold {
   transition: 200ms; }
 
 .button-labs {
+  width: 190px;
   border: 1px solid;
   border-radius: 3px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
-  padding: 0.2em 0.5em;
-  display: block;
   cursor: pointer;
   margin: 1em auto;
   border-color: #009688;
   color: #009688;
   background: #fbfbfb;
   transition: 200ms; }
+  .button-labs > a {
+    color: #009688;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    display: block; }
 
 .button-labs:hover {
   border-color: #fbfbfb;
   color: #fbfbfb;
   background: rgba(255, 255, 255, 0);
   transition: 200ms; }
+  .button-labs:hover > a {
+    color: #fbfbfb; }
 
 .button-job {
   border-radius: 3px;

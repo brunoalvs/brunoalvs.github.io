@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Bruno Alves - Desenvolvedor Front End
+title: Bruno Alves
 email: brunoalv.s@outlook.com
 description: >
-  Crie um site profissional e responsivo com foco na experiência do usuário para você ou seu negócio.
+  Desenvolvedor Front End e Web Designer com foco na experiência do usuário (UX), designs responsivos e código limpo e semântico.
 keywords: >
   webdesign, desenvolvedor front end, experiência do usuário, ux, arquitetura de informação, criar sites, web app, aplicativo web, design responsivo, código identado, semântica.
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -6,15 +6,12 @@ header {
   background-blend-mode: color-dodge;
   background-position-x: 50%;
   background-position-y: 25%;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
   border-bottom: 0.5em solid; }
   header > .logo {
     width: 5em;
@@ -112,15 +109,12 @@ header {
     display: block; }
   .job > .job-cover {
     width: 100%;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding: 2em 0;
     margin: 2em 0; }
     .job > .job-cover > img {

@@ -1,9 +1,14 @@
+'use strict'
+
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
+var pug         = require('gulp-pug');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var jade        = require('gulp-jade');
+
+var htmlmin     = require('gulp-htmlmin');
+var cleanCSS    = require('gulp-clean-css')
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -22,7 +27,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['sass', 'jade','sassjobs', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'pug', 'pugjob', 'sassjobs', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -48,21 +53,50 @@ gulp.task('sassjobs', function() {
     .pipe(browserSync.reload({stream:true}))
 });
 
-
-// Travis building a gulp task for jade
-gulp.task('jade', function(){
-    return gulp.src('_jadefiles/*.jade')
-    .pipe(jade())
+// Travis building a gulp task for pug
+gulp.task('pug', function(){
+  return gulp.src('_pugfiles/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('_includes'));
+});
+
+gulp.task('pugjob', function() {
+  return gulp.src('jobs/_pugfiles/*.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('_includes/jobs'));
 });
 
 // Watch scss files for changes & recompile. Watch html/md files, run jekyll & reload BrowserSync
 gulp.task('watch', function () {
     gulp.watch('assets/sass/**/*.{sass,scss}', ['sass']);
-    gulp.watch('_jadefiles/*.jade', ['jade']);
+    gulp.watch('_pugfiles/*.pug', ['pug']);
+    gulp.watch('jobs/_pugfiles/*.pug', ['pugjob']);
     gulp.watch('jobs/css/**/*.{sass,scss}', ['sassjobs']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*', 'assets/css/*.css', 'jobs/*.html', 'jobs/css/*.css'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*', '_includes/jobs/*', 'assets/css/*.css', 'jobs/*.html', 'jobs/css/*.css'], ['jekyll-rebuild']);
 });
 
-// Default task, running just `gulp` will compile the sass, jade, compile the jekyll site, launch BrowserSync & watch files.
+
+// minify html
+gulp.task('min-html', function() {
+  return gulp.src('_includes/*.html')
+    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+    .pipe(gulp.dest('_includes/'))
+});
+
+// compress css
+gulp.task('min-css', function() {
+  return gulp.src('assets/css/*.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('assets/css/'))
+});
+gulp.task('min-css-jobs', function() {
+  return gulp.src('jobs/css/*.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('jobs/css/'))
+});
+
+// Default task, running just `gulp` will compile the sass, pug, compile the jekyll site, launch BrowserSync & watch files.
 gulp.task('default', ['browser-sync', 'watch']);
+
+// Minify task
+gulp.task('build', ['min-css', 'min-html', 'min-css-jobs'])

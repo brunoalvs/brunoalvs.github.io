@@ -3,7 +3,9 @@
   {% include head-jobs.html %}
   <body>
     {{ content }}
-
+    <script>
+      new WOW().init();
+    </script>
     <script>
       $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {

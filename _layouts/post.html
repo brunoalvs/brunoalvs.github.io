@@ -3,26 +3,26 @@
   {% include head-jobs.html %}
   <body>
     {{ content }}
-		<script type="text/javascript" src="/assets/js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script>
-      $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-    </script>
   </body>
-
 </html>
+<link rel="stylesheet" href="/assets/css/default.css" media="none" onload="if(media!='all')media='all'">
+<script type="text/javascript" src="/assets/js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>

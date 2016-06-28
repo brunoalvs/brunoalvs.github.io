@@ -1,14 +1,14 @@
 'use strict'
 
-var gulp        = require('gulp');
 var browserSync = require('browser-sync');
+var gulp        = require('gulp');
 var pug         = require('gulp-pug');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var sourcemaps  = require('gulp-sourcemaps');
 var cp          = require('child_process');
 
 var htmlmin     = require('gulp-htmlmin');
-var cleanCSS    = require('gulp-clean-css')
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -38,8 +38,11 @@ gulp.task('browser-sync', ['sass', 'pug', 'pugjob', 'sassjobs', 'jekyll-build'],
 // SASS/SCSS to CSS in _site
 gulp.task('sass', function() {
   return gulp.src('assets/sass/**.{sass,scss}')
-    .pipe(sass({ onError: browserSync.notify }))
+    .pipe(sourcemaps.init())
+      .pipe(sass({ onError: browserSync.notify }))
+      .pipe(sass({outputStyle: 'compressed'}))
     .pipe(prefix({ browsers: ['last 2 versions'], }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}))
 });
@@ -84,11 +87,6 @@ gulp.task('min-html', function() {
 });
 
 // compress css
-gulp.task('min-css', function() {
-  return gulp.src('assets/css/*.css')
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('assets/css/'))
-});
 gulp.task('min-css-jobs', function() {
   return gulp.src('jobs/css/*.css')
     .pipe(cleanCSS())

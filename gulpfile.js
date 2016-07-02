@@ -8,6 +8,7 @@ var prefix      = require('gulp-autoprefixer');
 var sourcemaps  = require('gulp-sourcemaps');
 var cp          = require('child_process');
 
+var imagemin     = require('gulp-tinypng');
 var htmlmin     = require('gulp-htmlmin');
 
 var messages = {
@@ -78,6 +79,12 @@ gulp.task('watch', function () {
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*', '_includes/jobs/*', 'assets/css/*.css', 'jobs/*.html', 'jobs/css/*.css'], ['jekyll-rebuild']);
 });
 
+// tiny-png
+gulp.task('imagemin', function() {
+  return gulp.src('assets/images/**/*.{png,jpg,jpeg}')
+    .pipe(imagemin('XQVIk6EjMvJX0hY9uhoxgT-DXOxFAtPn'))
+    .pipe(gulp.dest('assets/images/'));
+});
 
 // minify html
 gulp.task('min-html', function() {
@@ -97,4 +104,4 @@ gulp.task('min-css-jobs', function() {
 gulp.task('default', ['browser-sync', 'watch']);
 
 // Minify task
-gulp.task('build', ['min-css', 'min-html', 'min-css-jobs'])
+gulp.task('build', ['min-css', 'min-html', 'min-css-jobs', 'imagemin'])

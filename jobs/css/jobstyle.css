@@ -1,18 +1,9 @@
 header {
   width: 100%;
-  background-image: url(../../assets/img/layout-img/background-jobs.jpg);
-  background-size: cover;
   background-color: rgba(20, 20, 19, 0.9);
   background-blend-mode: color-dodge;
   background-position-x: 50%;
-  background-position-y: 25%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
-  border-bottom: 0.5em solid; }
+  background-position-y: 25%; }
   header > .logo {
     width: 5em;
     height: 5em;

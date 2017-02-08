@@ -125,6 +125,14 @@ header {
   .job > .job-layout {
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.7); }
 
+.avc > .title-page {
+  width: 85%;
+  max-width: 13.5em;
+  border-bottom: 4px solid #1ebef0; }
+
+.avc > .job-cover {
+  background-color: rgba(30, 190, 240, 0.9); }
+
 .ktm > .title-page {
   width: 85%;
   max-width: 13.5em;

@@ -1,0 +1,32 @@
+{
+  "name": "brunoalvs.github.io",
+  "version": "3.0.0",
+  "description": "A web site personal of front end developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoalvs/brunoalvs.github.io.git"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "portfolio",
+    "site",
+    "javascript",
+    "ecmascript",
+    "gulp",
+    "4",
+    "sass",
+    "gh",
+    "pages"
+  ],
+  "author": "@brunoalvs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoalvs/brunoalvs.github.io/issues"
+  },
+  "homepage": "https://github.com/brunoalvs/brunoalvs.github.io#readme"
+}

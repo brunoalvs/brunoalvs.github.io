@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/brunoalvs/brunoalvs.github.io#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",

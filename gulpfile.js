@@ -5,7 +5,10 @@ const concat = require('gulp-concat');
 const size = require('gulp-size');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
+const browsersync = require('browser-sync');
 const del = require('del');
+
+const server = browsersync.create();
 
 function clean() {
   return del(['dist']);
@@ -46,11 +49,26 @@ function image() {
     .pipe(gulp.dest('dist'));
 }
 
+// BrowserSync
+function reload(done) {
+  server.reload();
+  done();
+}
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: './dist/',
+    },
+  });
+
+  done();
+}
 // Who watch the Watchers?
 function watch() {
-  gulp.watch('src/sass/**/*.scss', sass);
-  gulp.watch('src/**/*.pug', pugToHtml);
-  gulp.watch('src/images', image);
+  gulp.watch('src/sass/**/*.scss', gulp.series(sass, reload));
+  gulp.watch('src/scripts/**/*.js', gulp.series(js, reload));
+  gulp.watch('src/**/*.pug', gulp.series(pugToHtml, reload));
+  gulp.watch('src/images/**/*.{svg,png,gif,jpg,jpeg}', gulp.series(image, reload));
 }
 
 // CommonJs `exports` module
@@ -60,5 +78,7 @@ exports.image = image;
 exports.pugToHtml = pugToHtml;
 exports.js = js;
 exports.watch = watch;
+exports.serve = serve;
 
 gulp.task('build', gulp.series(clean, gulp.parallel(pugToHtml, styles, js, image)));
+gulp.task('dev', gulp.series('build', gulp.parallel(serve, watch)));

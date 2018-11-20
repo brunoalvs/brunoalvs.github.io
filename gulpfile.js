@@ -38,8 +38,18 @@ function image() {
     .pipe(gulp.dest('dist'));
 }
 
+// Who watch the Watchers?
+function watch() {
+  gulp.watch('src/sass/**/*.scss', sass);
+  gulp.watch('src/**/*.pug', pugToHtml);
+  gulp.watch('src/images', image);
+}
+
 // CommonJs `exports` module
 exports.clean = clean;
 exports.styles = styles;
 exports.image = image;
 exports.pugToHtml = pugToHtml;
+exports.watch = watch;
+
+gulp.task('build', gulp.series(clean, gulp.parallel(pugToHtml, styles, image)));

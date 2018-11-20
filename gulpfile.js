@@ -1,18 +1,26 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const pug = require('gulp-pug');
 const size = require('gulp-size');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const del = require('del');
 
 function clean() {
-  return del(['assets']);
+  return del(['dist']);
 }
 
 function styles() {
   return gulp.src('src/sass/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('dist/assets/css'));
+}
+
+function pugToHtml() {
+  return gulp.src('src/*.pug')
+    .pipe(pug())
+    .pipe(size({ title: 'pug:' }))
+    .pipe(gulp.dest('dist/'));
 }
 
 function image() {
@@ -34,3 +42,4 @@ function image() {
 exports.clean = clean;
 exports.styles = styles;
 exports.image = image;
+exports.pugToHtml = pugToHtml;

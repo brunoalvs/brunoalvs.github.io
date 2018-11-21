@@ -16,6 +16,12 @@ function clean() {
   return del(['dist']);
 }
 
+function moveMedia() {
+  return gulp.src('src/media/*')
+    .pipe(size({ title: 'media size:' }))
+    .pipe(gulp.dest('dist/assets/media/'));
+}
+
 function moveFiles() {
   return gulp.src('src/*.{js,json,xml}')
     .pipe(size({ title: 'files in root moved' }))
@@ -92,8 +98,9 @@ exports.image = image;
 exports.pugToHtml = pugToHtml;
 exports.js = js;
 exports.moveFiles = moveFiles;
+exports.moveMedia = moveMedia;
 exports.watch = watch;
 exports.serve = serve;
 
-gulp.task('build', gulp.series(clean, gulp.parallel(moveFiles, pugToHtml, styles, js, image)));
+gulp.task('build', gulp.series(clean, gulp.parallel(moveFiles, moveMedia, pugToHtml, styles, js, image)));
 gulp.task('dev', gulp.series('build', gulp.parallel(serve, watch)));

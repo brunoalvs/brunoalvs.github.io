@@ -16,6 +16,12 @@ function clean() {
   return del(['dist']);
 }
 
+function moveFiles() {
+  return gulp.src('src/*.{js,json,xml}')
+    .pipe(size({ title: 'files in root moved' }))
+    .pipe(gulp.dest('dist/'));
+}
+
 function styles() {
   return gulp.src('src/styles/*.styl')
     .pipe(plumber())
@@ -25,7 +31,7 @@ function styles() {
 
 function pugToHtml() {
   return gulp.src('src/*.pug')
-    .pipe(pug())
+    .pipe(pug({ pretty: true }))
     .pipe(size({ title: 'pug:' }))
     .pipe(gulp.dest('dist/'));
 }
@@ -72,6 +78,7 @@ function serve(done) {
 }
 // Who watch the Watchers?
 function watch() {
+  gulp.watch('src/*.{js,json,xml}', gulp.series(moveFiles, reload));
   gulp.watch('src/styles/**/*.styl', gulp.series(styles, reload));
   gulp.watch('src/scripts/**/*.js', gulp.series(js, reload));
   gulp.watch('src/**/*.pug', gulp.series(pugToHtml, reload));
@@ -84,8 +91,9 @@ exports.styles = styles;
 exports.image = image;
 exports.pugToHtml = pugToHtml;
 exports.js = js;
+exports.moveFiles = moveFiles;
 exports.watch = watch;
 exports.serve = serve;
 
-gulp.task('build', gulp.series(clean, gulp.parallel(pugToHtml, styles, js, image)));
+gulp.task('build', gulp.series(clean, gulp.parallel(moveFiles, pugToHtml, styles, js, image)));
 gulp.task('dev', gulp.series('build', gulp.parallel(serve, watch)));

@@ -2,8 +2,10 @@
 const staticCacheName = 'brunoalves-static-v1';
 const filesToCache = [
   'index.html',
+  'assets/css/404.css',
   'assets/css/main.css',
   'assets/js/app.js',
+  '404.html',
 ];
 
 this.addEventListener('install', (event) => {

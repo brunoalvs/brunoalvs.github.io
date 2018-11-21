@@ -1,6 +1,7 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const styl = require('gulp-stylus');
 const pug = require('gulp-pug');
+const prefix = require('autoprefixer-stylus');
 const concat = require('gulp-concat');
 const size = require('gulp-size');
 const imagemin = require('gulp-imagemin');
@@ -16,9 +17,9 @@ function clean() {
 }
 
 function styles() {
-  return gulp.src('src/sass/*.scss')
+  return gulp.src('src/styles/*.styl')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(styl({ use: prefix('> 5%') }))
     .pipe(gulp.dest('dist/assets/css'));
 }
 
@@ -71,7 +72,7 @@ function serve(done) {
 }
 // Who watch the Watchers?
 function watch() {
-  gulp.watch('src/sass/**/*.scss', gulp.series(sass, reload));
+  gulp.watch('src/styles/**/*.styl', gulp.series(styles, reload));
   gulp.watch('src/scripts/**/*.js', gulp.series(js, reload));
   gulp.watch('src/**/*.pug', gulp.series(pugToHtml, reload));
   gulp.watch('src/images/**/*.{svg,png,gif,jpg,jpeg}', gulp.series(image, reload));

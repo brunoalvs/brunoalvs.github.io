@@ -1,7 +1,13 @@
 - var title = "404 Error"
+- var errorTitle = "404 Error"
 
 <!DOCTYPE html>
 html(lang="en")
+  link(rel="stylesheet", href="assets/css/404.css")
   include includes/head.pug
   body
-    h1 404 Error
+    section.error-status
+      h1 #{errorTitle}
+      p A página que você está procurando não está disponível ou não existe mais.
+      a.btn(href="index.html") voltar a home
+

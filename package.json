@@ -1,0 +1,20 @@
+{
+  "name": "brunoalvs.github.io",
+  "version": "2.0.0",
+  "description": "Build to portfolio website of Bruno Alves, the author this project.",
+  "main": "index.js",
+  "repository": "https://github.com/brunoalvs/brunoalvs.github.io.git",
+  "author": "Bruno Alves <hello.brunoalves@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}

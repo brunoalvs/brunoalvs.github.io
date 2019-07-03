@@ -1,50 +1,20 @@
 {
   "name": "brunoalvs.github.io",
-  "version": "3.0.0",
-  "description": "A web site personal of front end developer",
+  "version": "2.0.0",
+  "description": "Build to portfolio website of Bruno Alves, the author this project.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brunoalvs/brunoalvs.github.io.git"
-  },
-  "keywords": [
-    "front",
-    "end",
-    "portfolio",
-    "site",
-    "javascript",
-    "ecmascript",
-    "gulp",
-    "4",
-    "sass",
-    "gh",
-    "pages"
-  ],
-  "author": "@brunoalvs",
+  "repository": "https://github.com/brunoalvs/brunoalvs.github.io.git",
+  "author": "Bruno Alves <hello.brunoalves@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/brunoalvs/brunoalvs.github.io/issues"
+  "private": true,
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
-  "homepage": "https://github.com/brunoalvs/brunoalvs.github.io#readme",
-  "devDependencies": {
-    "autoprefixer-stylus": "^0.14.0",
-    "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-newer": "^1.4.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-size": "^3.0.0",
-    "gulp-stylus": "^2.7.0"
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   }
 }

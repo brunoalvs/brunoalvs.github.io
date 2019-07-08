@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["e6cc"],{STsu:function(n,t,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){var n=u("vBwC");return{page:n.default||n}}])},vBwC:function(n,t,u){"use strict";u.r(t);var e=u("q1tI"),o=u.n(e);t.default=function(){return o.a.createElement("p",null,"Welcome to About!")}}},[["STsu","5d41","9da1"]]]);

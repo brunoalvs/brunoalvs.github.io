@@ -1,0 +1,23 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Bruno Alves
+email: brunoalv.s@outlook.com
+description: >
+  Desenvolvedor Front End e Web Designer com foco na experiência do usuário (UX), designs responsivos e código limpo e semântico.
+keywords: >
+  webdesign, desenvolvedor front end, experiência do usuário, ux, arquitetura de informação, criar sites, web app, aplicativo web, design responsivo, código identado, semântica.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://brunoalvs.github.io/" # the base hostname & protocol for your site
+twitter_username: brunoalv_s
+github_username:  brunoalvs
+
+# Build settings
+markdown: kramdown
+
+exclude: ['node_modules', 'Thumbs.db', 'assets/sass']

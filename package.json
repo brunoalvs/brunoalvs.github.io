@@ -1,20 +1,45 @@
 {
-  "name": "brunoalvs.github.io",
-  "version": "2.0.0",
-  "description": "Build to portfolio website of Bruno Alves, the author this project.",
-  "main": "index.js",
-  "repository": "https://github.com/brunoalvs/brunoalvs.github.io.git",
-  "author": "Bruno Alves <hello.brunoalves@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
+  "name": "brunoalves.info",
+  "version": "1.4.0",
+  "description": "Front End build to the bruno alves web site.",
+  "main": "gulpfile.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  }
+    "dev": "gulp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Alves",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunoalv-s/brunoalv-s.github.io.git"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "pug",
+    "rscss",
+    "browsersync"
+  ],
+  "bugs": {
+    "url": "https://github.com/brunoalv-s/brunoalv-s.github.io/issues"
+  },
+  "homepage": "https://github.com/brunoalv-s/brunoalv-s.github.io",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

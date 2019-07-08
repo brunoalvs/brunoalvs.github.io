@@ -1,0 +1,169 @@
+header {
+  width: 100%;
+  background-color: rgba(20, 20, 19, 0.9);
+  background-blend-mode: color-dodge;
+  background-position-x: 50%;
+  background-position-y: 25%; }
+  header > .logo {
+    width: 5em;
+    height: 5em;
+    text-indent: -50000em;
+    background-image: url(../../assets/img/layout-img/icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block; }
+
+.menu {
+  text-align: center; }
+  .menu > ul > li {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    margin: 2em 0;
+    border-radius: 2px; }
+    .menu > ul > li > a {
+      width: 100%;
+      display: inline-block;
+      color: #fbfbfb;
+      text-decoration: none;
+      padding: 0.9em 2.5em;
+      -webkit-transition: 300ms;
+      transition: 300ms; }
+  .menu > ul > li:hover:nth-child(1) {
+    background-color: #1ebef0;
+    -webkit-transition: 300ms;
+    transition: 300ms; }
+  .menu > ul > li:hover:nth-child(2) {
+    background-color: #009688;
+    -webkit-transition: 300ms;
+    transition: 300ms; }
+  .menu > ul > li:hover:nth-child(3) {
+    background-color: #ff4b39;
+    -webkit-transition: 300ms;
+    transition: 300ms; }
+
+@media screen and (max-width: 769px) {
+  .logo {
+    margin: 1.5em 0; }
+  #menu {
+    display: none; }
+  .menu {
+    position: fixed; }
+    .menu > ul > li {
+      width: 33.33%;
+      text-align: center; }
+      .menu > ul > li > a {
+        padding: 0.9em 0; }
+  .menu {
+    width: 100%;
+    top: auto;
+    bottom: 0px;
+    z-index: 100;
+    background-color: #181716;
+    text-align: center; }
+    .menu > ul {
+      max-height: 4em;
+      overflow: hidden; }
+      .menu > ul > li {
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.3em;
+        font-weight: 300;
+        -webkit-transition: 300ms;
+        transition: 300ms;
+        margin: 0;
+        padding: 0.8em 0; }
+        .menu > ul > li > a {
+          width: 100%;
+          display: block;
+          color: #fbfbfb;
+          text-decoration: none;
+          padding: 0.1em 0.8em;
+          -webkit-transition: 300ms;
+          transition: 300ms; } }
+
+@media screen and (min-width: 770px) {
+  #menu-mobile {
+    display: none; } }
+
+.job {
+  padding: 2em 0; }
+  .job > .job-desc {
+    max-width: 50em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+    margin: 1em auto; }
+    .job > .job-desc > p {
+      margin: 1em 0; }
+  .job > img {
+    text-align: center;
+    width: auto;
+    max-width: 90%;
+    margin: 2em auto;
+    display: block; }
+  .job > .gifs {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em; }
+    .job > .gifs > img {
+      margin: 1em;
+      width: 90%;
+      max-width: 320px; }
+  .job > .job-cover {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2em 0;
+    margin: 2em 0; }
+    .job > .job-cover > img {
+      width: 0 auto;
+      max-width: 90%; }
+  .job > .job-layout {
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.7); }
+
+.avc > .title-page {
+  width: 85%;
+  max-width: 13.5em;
+  border-bottom: 4px solid #1ebef0; }
+
+.avc > .job-cover {
+  background-color: rgba(30, 190, 240, 0.9); }
+
+.embratubo > .title-page {
+  width: 85%;
+  max-width: 13.5em;
+  border-bottom: 4px solid #67b025; }
+
+.embratubo > .job-cover {
+  background-color: rgba(103, 176, 37, 0.9); }
+
+.ktm > .title-page {
+  width: 85%;
+  max-width: 13.5em;
+  border-bottom: 4px solid orange; }
+
+.ktm > .job-cover {
+  background-color: rgba(255, 102, 0, 0.9); }
+
+.satoplay > .title-page {
+  width: 85%;
+  max-width: 12.5em;
+  border-bottom: 4px solid rgba(166, 69, 149, 0.9); }
+
+.satoplay > .job-cover {
+  background-color: rgba(166, 69, 149, 0.9); }

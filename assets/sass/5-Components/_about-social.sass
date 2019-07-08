@@ -1,0 +1,93 @@
+.about-social
+  width: 100%
+  display: block
+  margin:
+    top: 2em
+    left: auto
+    right: auto
+  text-align: center
+  padding-bottom: 2em
+  border-bottom: 0.01em solid $almost-black
+
+  > li
+    display: inline-block
+    width: 20%
+    max-width: 2.5em
+    height: 20%
+    max-height: 2.5em
+    margin:
+      left: 0.3em
+      right: 0.3em
+    background:
+      position: center
+      color: $white
+      repeat: no-repeat
+    border-radius: 100%
+
+    > a
+      width: 100%
+      height: 100%
+      border-radius: 100%
+      display: block
+      transition: 200ms
+
+@media screen and #{$mobile}
+  .about-social
+    width: 100%
+
+  // Icons Settings
+  .email-icon
+    fill: orange
+
+  .behance-icon
+    fill: $behance-color
+
+  .github-icon
+    fill: $github-color
+
+  .linkedin-icon
+    fill: $linkedin-color
+
+  .twitter-icon
+    fill: $twitter-color
+
+@media screen and #{$desktop}
+  .email-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $email-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .behance-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $behance-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .github-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $github-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .linkedin-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $linkedin-color
+      fill-opacity: 1
+      transition: 200ms
+
+  .twitter-icon
+    fill-opacity: .6
+    transition: 200ms
+    &:hover
+      fill: $twitter-color
+      fill-opacity: 1
+      transition: 200ms
